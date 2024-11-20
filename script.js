@@ -16,15 +16,17 @@ if (whichPokemon.length > 3) {
   console.error("Please only input one pokemon at a time.");
 } else {
   pokemon = process.argv[2];
+  fetchData();
 }
-console.log(pokemon);
+// console.log(pokemon);
 
 async function fetchData() {
   try {
     console.log();
-    const pokemonData = await fetch(
+    const response = await fetch(
       `https://pokeapi.co/api/v2/pokemon/${pokemon}/`
     );
+    const pokemonData = await response.json();
     if (pokemonData === " " || pokemonData === 0) {
       throw new Error("data is empty, please try again later");
     }
@@ -35,6 +37,3 @@ async function fetchData() {
     console.error("Please input a valid pokemon." || error.message);
   }
 }
-fetchData();
-
-// console.log(cats);
