@@ -30,8 +30,11 @@ async function fetchData() {
     if (pokemonData === " " || pokemonData === 0) {
       throw new Error("data is empty, please try again later");
     }
-
-    console.log(pokemonData);
+    for (const move in pokemon.moves) {
+      const move = pokemon.moves.move;
+      console.log(move);
+    }
+    console.log(pokemonData.moves[1]);
     // return certain data.
   } catch (error) {
     console.error("Please input a valid pokemon." || error.message);
