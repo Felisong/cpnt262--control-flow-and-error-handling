@@ -1,7 +1,5 @@
 "use strict";
-import { error } from "console";
 import fetch from "node-fetch";
-import { type } from "os";
 
 const whichPokemon = process.argv;
 let pokemon;
@@ -18,11 +16,10 @@ if (whichPokemon.length > 3) {
   pokemon = process.argv[2];
   fetchData();
 }
-// console.log(pokemon);
 
+// FUNCTION TO FETCH API
 async function fetchData() {
   try {
-    console.log();
     const response = await fetch(
       `https://pokeapi.co/api/v2/pokemon/${pokemon}/`
     );
@@ -30,12 +27,14 @@ async function fetchData() {
     if (pokemonData === " " || pokemonData === 0) {
       throw new Error("data is empty, please try again later");
     }
-    for (const move in pokemon.moves) {
-      const move = pokemon.moves.move;
+    console.log(` below are all of ${pokemon}'s moves! : `);
+    // Loop through objects
+    for (const [key, value] of Object.entries(pokemonData.moves)) {
+      // console.log(`${key}: ${value}`);
+      let move = pokemonData.moves[key].move.name;
       console.log(move);
     }
-    console.log(pokemonData.moves[1]);
-    // return certain data.
+    // console.log(typeof pokemonData.moves[0].move.name);
   } catch (error) {
     console.error("Please input a valid pokemon." || error.message);
   }
