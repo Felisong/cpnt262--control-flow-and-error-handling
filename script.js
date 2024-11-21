@@ -2,18 +2,17 @@
 import fetch from "node-fetch";
 
 const whichPokemon = process.argv;
-let pokemon;
+let pokemon = process.argv[2];
 
-// instructions
-// console.log(
-//   "Please input your chosen Pokemon following this structure: node script.js pikachu"
-// );
+pokemon = pokemon.toLowerCase();
 
 // no more than 3 inputs for the user to know.
 if (whichPokemon.length > 3) {
   console.error("Please only input one pokemon at a time.");
+}
+if (typeof pokemon !== "string") {
+  console.error("please input a valid pokemon name");
 } else {
-  pokemon = process.argv[2];
   fetchData();
 }
 
@@ -27,14 +26,14 @@ async function fetchData() {
     if (pokemonData === " " || pokemonData === 0) {
       throw new Error("data is empty, please try again later");
     }
-    console.log(` below are all of ${pokemon}'s moves! : `);
+    console.log(` below are all of ${pokemon}'s possible moves! : `);
     // Loop through objects
+    const movesArr = [];
     for (const [key, value] of Object.entries(pokemonData.moves)) {
-      // console.log(`${key}: ${value}`);
       let move = pokemonData.moves[key].move.name;
-      console.log(move);
+      movesArr.push(move);
     }
-    // console.log(typeof pokemonData.moves[0].move.name);
+    console.log(movesArr);
   } catch (error) {
     console.error("Please input a valid pokemon." || error.message);
   }
