@@ -50,12 +50,24 @@ Have a terminal or command prompt open
 4. Copy the repository's HTTPS URL from GitHub and use the git clone command:
 
 ```
-   git clone https://github.com/username/repository.git
+   git clone https://github.com/Felisong/cpnt262-control-flow-and-error-handling.git
 ```
 
-Method 3: Clone Using Visual Studio Code
-Open Visual Studio Code
-Press Ctrl+Shift+P to open the Command Palette
-Type "Git: Clone"
-Paste the repository URL
-Choose a location to save the repository
+## Method 3: Clone Using Visual Studio Code
+
+1. Open Visual Studio Code
+
+2. Press Ctrl+Shift+P to open the Command Palette
+
+3. Type "Git: Clone"
+
+4. Paste the repository URL
+   https://github.com/Felisong/cpnt262-control-flow-and-error-handling.git
+
+5. Choose a location to save the repository
+
+## Attributions
+
+- [w3schools.com](https://www.w3schools.com)
+- [stackoverflow.com](https://stackoverflow.com/questions/29885220/using-objects-in-for-of-loops)
+- [pokemon API](https://pokeapi.co)
