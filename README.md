@@ -4,6 +4,15 @@ Welcome to my Control Flow & Error Handling lab for school. I am a student atten
 
 Here inside script.js I have an API interaction and Data processing. I am fetching from [PokeAPI](https://pokeapi.co) and want to give the user the moves the inputted Pokemon have.
 
+[Link to this Repository](https://github.com/Felisong/cpnt262-control-flow-and-error-handling)
+
+## Table of Contents
+
+- [Instructions to Use](#instructions)
+- [Broken Script Instructions](#brokenscriptjs)
+- [Collaborations](#collaborations)
+- [Attributions](#attributions)
+
 ## Instructions
 
 When you are inside script.js, open your terminal and input the follow structure:
