@@ -16,6 +16,14 @@ In this you can change Pikachu to any pokemon you may know, and the information 
 
 This input accepts both lowercase and uppercase, so feel free to experiment.
 
+### brokenScript.js
+
+An instruction section for the brokenScript. I already put some in comments but if you want to copy and paste these to test my error handling they're here as well.
+
+node brokenScript.js meowth pikachu
+node brokenScript.js 245
+node brokenScript.js haha
+
 ## Collaborations
 
 If you want to use this in anyway, please free free. I am not going to be changing this repository anymore, and will not be collaborating with anyone. However, if this code for some reason or another can be of use to you, you may use it.
